@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: digital-wallet-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/wallet}
+    username: ${SPRING_DATASOURCE_USERNAME:wallet}
+    password: ${SPRING_DATASOURCE_PASSWORD:wallet_dev_only}
+  flyway:
+    enabled: true
+  jackson:
+    default-property-inclusion: non_null
+server:
+  port: 8080
+logging:
+  level:
+    com.example.wallet: INFO
